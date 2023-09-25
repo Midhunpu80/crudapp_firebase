@@ -18,3 +18,11 @@ adddata({
 deleteata({required var id}) {
   listdata.doc(id).delete();
 }
+
+edit({required var tit, required var sub, required var id}) {
+  var data = {
+    "title": tit,
+    "subtitle": sub,
+  };
+  listdata.doc(id).update(data);
+}

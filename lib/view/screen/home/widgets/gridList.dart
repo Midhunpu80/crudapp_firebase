@@ -4,6 +4,7 @@ import 'package:note_bloc/db/functions/functions.dart';
 import 'package:note_bloc/utils/alltext/alltext.dart';
 import 'package:note_bloc/utils/colros/colors.dart';
 import 'package:note_bloc/view/screen/home/widgets/adddatadialog.dart';
+import 'package:note_bloc/view/screen/home/widgets/editdata.dart';
 import 'package:sizer/sizer.dart';
 
 Widget gridList() {
@@ -66,6 +67,13 @@ Widget gridList() {
                                     ),
                                     InkWell(
                                       onTap: () {
+                                        editDATA(
+                                          context: context,
+                                          titl: snap['title'].toString(),
+                                          id: snap.id,
+                                          subl: snap['subtitle'].toString(),
+                                        );
+
                                         print("raivsnsn");
                                       },
                                       child: Icon(
